@@ -1,0 +1,9 @@
+15:42:57 **** Incremental Build of configuration Nios II for project cs302_lab2 ****
+make all 
+Info: Building ../cs302_lab2_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cs302_lab2_bsp/
+[BSP build complete]
+[cs302_lab2 build complete]
+
+15:42:58 Build Finished (took 537ms)
+

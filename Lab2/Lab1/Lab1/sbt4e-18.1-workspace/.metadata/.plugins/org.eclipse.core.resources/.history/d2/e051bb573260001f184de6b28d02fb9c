@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include "sys/alt_alarm.h"
+
+
+alt_u32 timer_isr_function(void* context){
+	int *timeCount = (int*) context;
+	(*timeCount)++;
+	printf("time:%d\n", *timeCount);
+	return 1000; // the next time out will be 1000 milli-seconds
+}
+
+int main(){
+	alt_alarm timer;
+	int timeCountMain = 0;
+	void* timerContext = (void*) &timeCountMain;
+	// start the timer, with timeout of 1000 milli-seconds
+	alt_alarm_start(&timer, 1000, timer_isr_function, timerContext);
+
+	while(1){
+		if ( timeCountMain == 10){
+			alt_alarm_stop(&timer);
+			usleep(1000000);
+			alt_alarm_start(&timer, 1000, timer_isr_function, timerContext);
+			usleep(1500000);
+		}
+	}
+	return 0;
+}

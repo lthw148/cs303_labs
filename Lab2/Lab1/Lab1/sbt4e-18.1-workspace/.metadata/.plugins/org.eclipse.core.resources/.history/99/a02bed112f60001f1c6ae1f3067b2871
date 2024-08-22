@@ -1,0 +1,77 @@
+#include <system.h>
+#include <altera_avalon_pio_regs.h>
+#include <stdio.h>
+#include "SCC_Charts.h"
+
+volatile char c;
+
+// first we write our interrupt function
+void button_interrupts_function(void* context, alt_u32 id, TickData data){
+	int* temp = (int*) context; // need to cast the context first before using it
+	(*temp) = IORD_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE);
+	// clear the edge capture register
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
+	if (*temp == 1){
+		c = 'R';
+		data.R = '1';
+
+		// logic(R);
+	}else if (*temp == 2){
+		c = 'B';
+		// logic(B);
+		data.B ='1';
+	}
+	else if (*temp == 3){
+		c = 'A';
+		// logic(A);
+		data.A ='1';
+	}else if (*temp == 4){
+		c = 'A';
+		// logic(A);
+		data.A ='1';
+	}else{
+		c = 'E';
+		// logic(E);
+	}
+
+	printf("value: %c\n", c);
+}
+
+int main(){
+
+	TickData data;
+
+	int buttonValue = 1;
+	void* context_going_to_be_passed = (void*) &buttonValue;
+	// Create the struct
+
+
+	// Initialise
+	reset(&data);
+
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(KEYS_BASE, 0x7);
+
+	alt_irq_register(KEYS_IRQ,context_going_to_be_passed,button_interrupts_function, data);
+
+	while(1)
+	{
+		// Fetch button inputs
+		// A is Key 2, B is Key 1, R is Key 0
+		// Remember that keys are active low
+		IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
+
+		if (data.R == '1'){
+				//do nothing
+				IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0xFF);
+			}
+
+
+		// Do a tick!
+		tick(&data);
+		// Output O to Red LED
+
+
+	}
+	return 0;
+}
