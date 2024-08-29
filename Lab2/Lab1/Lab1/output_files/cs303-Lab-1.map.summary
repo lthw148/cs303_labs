@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Aug 22 13:46:57 2024
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Thu Aug 29 12:29:23 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : cs303-Lab-1
 Top-level Entity Name : cs303-Lab-1
 Family : Cyclone IV E
-Total logic elements : 5,499
-    Total combinational functions : 4,315
-    Dedicated logic registers : 3,208
-Total registers : 3208
+Total logic elements : 5,645
+    Total combinational functions : 4,453
+    Dedicated logic registers : 3,287
+Total registers : 3287
 Total pins : 103
 Total virtual pins : 0
 Total memory bits : 310,656

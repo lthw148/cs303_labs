@@ -1,34 +1,313 @@
-15:42:51 **** Incremental Build of configuration Nios II for project cs302_lab2 ****
+13:04:53 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
 make all 
-Info: Building ../cs302_lab2_bsp/
-C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cs302_lab2_bsp/
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
 [BSP build complete]
 Info: Compiling hello_world.c to obj/default/hello_world.o
-nios2-elf-gcc -xc -MP -MMD -c -I../cs302_lab2_bsp//HAL/inc -I../cs302_lab2_bsp/ -I../cs302_lab2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
 hello_world.c: In function 'main':
-hello_world.c:47:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,button_interrupts_function);
-  ^
-hello_world.c:62:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-    usleep(1000000);
-    ^
-Info: Linking cs302_lab2.elf
-nios2-elf-g++  -T'../cs302_lab2_bsp//linker.x' -msys-crt0='../cs302_lab2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cs302_lab2_bsp/   -Wl,-Map=cs302_lab2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o cs302_lab2.elf obj/default/SCC_Charts.o obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cs302_lab2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/lthw148/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ../..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/lthw148/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/software/cs302_lab2_bsp/../../nios2_system.sopcinfo
-Info: (cs302_lab2.elf) 78 KBytes program size (code + initialized data).
-Info:                  8106 KBytes free for stack + heap.
-Info: Creating cs302_lab2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cs302_lab2.elf >cs302_lab2.objdump
-[cs302_lab2 build complete]
-15:42:56 **** Build of configuration Nios II for project cs302_lab2 ****
+hello_world.c:52:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:05:21 **** Build of configuration Nios II for project hello_lab2_1 ****
 make all 
-Info: Building ../cs302_lab2_bsp/
-C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cs302_lab2_bsp/
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
 [BSP build complete]
-[cs302_lab2 build complete]
-15:42:57 **** Incremental Build of configuration Nios II for project cs302_lab2 ****
+[hello_lab2_1 build complete]
+13:05:26 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
 make all 
-Info: Building ../cs302_lab2_bsp/
-C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cs302_lab2_bsp/
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
 [BSP build complete]
-[cs302_lab2 build complete]
+[hello_lab2_1 build complete]
+13:06:32 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:06:35 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:08:28 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:08:34 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:12:52 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:44:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:12:59 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:23:50 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:44:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:23:57 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:26:18 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:42:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:26:25 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:32:46 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:52:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:32:55 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:41:20 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:35:5: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+     alt_irq_register(KEYS_IRQ, NULL, button_isr); // Register ISRs
+     ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:41:28 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:44:12 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+         usleep(50000);
+         ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:44:19 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:45:08 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+         usleep(50000);
+         ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:45:16 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:47:47 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 76 KBytes program size (code + initialized data).
+Info:                    8108 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:47:55 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:57:36 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:28:15: warning: unused variable 'uiButtonsValuePrevious' [-Wunused-variable]
+  unsigned int uiButtonsValuePrevious = 0;
+               ^
+hello_world.c:27:15: warning: unused variable 'uiButtonsValue' [-Wunused-variable]
+  unsigned int uiButtonsValue = 0;
+               ^
+hello_world.c:26:18: warning: unused variable 'uiSwitchValue' [-Wunused-variable]
+     unsigned int uiSwitchValue = 0;
+                  ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 78 KBytes program size (code + initialized data).
+Info:                    8106 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:57:45 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
+13:58:55 **** Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_lab2_1_bsp//HAL/inc -I../hello_lab2_1_bsp/ -I../hello_lab2_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:28:15: warning: unused variable 'uiButtonsValuePrevious' [-Wunused-variable]
+  unsigned int uiButtonsValuePrevious = 0;
+               ^
+hello_world.c:27:15: warning: unused variable 'uiButtonsValue' [-Wunused-variable]
+  unsigned int uiButtonsValue = 0;
+               ^
+hello_world.c:26:18: warning: unused variable 'uiSwitchValue' [-Wunused-variable]
+     unsigned int uiSwitchValue = 0;
+                  ^
+Info: Linking hello_lab2_1.elf
+nios2-elf-g++  -T'../hello_lab2_1_bsp//linker.x' -msys-crt0='../hello_lab2_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_lab2_1_bsp/   -Wl,-Map=hello_lab2_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o hello_lab2_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello_lab2_1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1" --jdi ..//output_files/cs303-Lab-1.jdi --sopcinfo C:/Users/Marc/Documents/GitHub/cs303_labs/Lab2/Lab1/Lab1/hello_lab2_1_bsp/../nios2_system.sopcinfo
+Info: (hello_lab2_1.elf) 78 KBytes program size (code + initialized data).
+Info:                    8106 KBytes free for stack + heap.
+Info: Creating hello_lab2_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello_lab2_1.elf >hello_lab2_1.objdump
+[hello_lab2_1 build complete]
+13:59:02 **** Incremental Build of configuration Nios II for project hello_lab2_1 ****
+make all 
+Info: Building ../hello_lab2_1_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_lab2_1_bsp/
+[BSP build complete]
+[hello_lab2_1 build complete]
