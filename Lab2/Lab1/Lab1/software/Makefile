@@ -142,7 +142,8 @@ ACDS_VERSION := 18.1
 ELF := hello_lab2_1.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world.c
+C_SRCS += hello_world.c
+C_SRCS += SCC_Charts.c
 CXX_SRCS :=
 ASM_SRCS :=
 

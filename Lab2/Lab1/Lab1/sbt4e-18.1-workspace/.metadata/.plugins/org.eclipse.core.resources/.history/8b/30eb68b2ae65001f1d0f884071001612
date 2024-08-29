@@ -1,0 +1,56 @@
+#include <system.h>
+#include <altera_avalon_pio_regs.h>
+#include <stdio.h>
+#include "SCC_Charts.h"
+
+volatile int buttonChanged = 0;
+
+int main(){
+	TickData data;
+
+	reset(&data);
+
+	while(1)
+	{
+		// Fetch button inputs
+		// A is Key 2, B is Key 1, R is Key 0
+		// Remember that keys are ACTIVE LOW
+
+		int buttonValue = IORD_ALTERA_AVALON_PIO_DATA(KEYS_BASE);
+
+		// Clear (may need to take these out)
+		int previousA = data.A;
+		int previousB = data.B;
+		int previousR = data.R;
+
+		if ((buttonValue & 0x04) == 0) { // KEY2 pressed
+			data.A = 1;
+		}
+
+		if ((buttonValue & 0x02) == 0) { // KEY1 pressed
+			data.B = 1;
+		}
+
+		if ((buttonValue & 0x01) == 0) { // KEY0 pressed
+			data.R = 1;
+		}
+
+
+		// Do a tick!
+		tick(&data);
+
+		// Output O to Red LED
+		if (data.O == 1) {
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE, 0x01);
+		} else {
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE, 0x00);
+		}
+
+		if (buttonChanged) {
+			printf("Button: %d || O value: %d\n", buttonValue, data.O);
+			buttonChanged = 0;
+		}
+	}
+
+	return 0;
+}

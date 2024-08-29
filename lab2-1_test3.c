@@ -14,7 +14,7 @@ alt_alarm timer;
 alt_u32 timer_isr(void* context) {
     counter++;
     counter_changed = 1;
-    return 500; // Timer continues every 500ms
+    return 500;
 }
 
 int main() {
